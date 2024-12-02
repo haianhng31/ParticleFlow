@@ -52,7 +52,7 @@ struct PresetFieldsView: View {
                     .padding(.horizontal)
                     .foregroundColor(.secondary)
                 
-                NavigationLink(destination: InteractiveFieldView()) {
+                NavigationLink(destination: AddNewFieldView()) {
                     GradientButton(text: "Next")
                         .frame(width: 150)
                 }
@@ -87,6 +87,8 @@ struct PresetFieldsView: View {
         case .wave:
             return Text("To be updated.")
         case .none:
+            return Text("")
+        case .custom(dx: _, dy: _):
             return Text("")
         }
     }

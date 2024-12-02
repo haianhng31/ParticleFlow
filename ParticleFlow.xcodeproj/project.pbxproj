@@ -31,6 +31,7 @@
 		F4E6BD572CFE3635008DF929 /* VectorFieldVisualizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E6BD562CFE3635008DF929 /* VectorFieldVisualizationView.swift */; };
 		F4E6BD592CFE3696008DF929 /* VectorMathPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E6BD582CFE3696008DF929 /* VectorMathPlayground.swift */; };
 		F4E6BD5B2CFE36BD008DF929 /* VectorFieldApplicationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E6BD5A2CFE36BD008DF929 /* VectorFieldApplicationsView.swift */; };
+		F4E6BD612CFE4528008DF929 /* AddNewFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E6BD602CFE4528008DF929 /* AddNewFieldView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,7 @@
 		F4E6BD562CFE3635008DF929 /* VectorFieldVisualizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VectorFieldVisualizationView.swift; sourceTree = "<group>"; };
 		F4E6BD582CFE3696008DF929 /* VectorMathPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VectorMathPlayground.swift; sourceTree = "<group>"; };
 		F4E6BD5A2CFE36BD008DF929 /* VectorFieldApplicationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VectorFieldApplicationsView.swift; sourceTree = "<group>"; };
+		F4E6BD602CFE4528008DF929 /* AddNewFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewFieldView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 				F4E6BD582CFE3696008DF929 /* VectorMathPlayground.swift */,
 				F4AA089F2CE018D200252A9C /* BasicsView.swift */,
 				F4AA08A12CE018DA00252A9C /* PresetFieldsView.swift */,
+				F4E6BD602CFE4528008DF929 /* AddNewFieldView.swift */,
 				F4AA08A32CE018E300252A9C /* InteractiveFieldView.swift */,
 				F4E6BD5A2CFE36BD008DF929 /* VectorFieldApplicationsView.swift */,
 				F4AA08E12CE07CBA00252A9C /* FinalConclusion.swift */,
@@ -248,6 +251,7 @@
 				F4AA08D72CE06E6600252A9C /* AllTabsView.swift in Sources */,
 				F4E6BD5B2CFE36BD008DF929 /* VectorFieldApplicationsView.swift in Sources */,
 				F4E6BD572CFE3635008DF929 /* VectorFieldVisualizationView.swift in Sources */,
+				F4E6BD612CFE4528008DF929 /* AddNewFieldView.swift in Sources */,
 				F4E6BD592CFE3696008DF929 /* VectorMathPlayground.swift in Sources */,
 				F4AA08EB2CE0803100252A9C /* CardsView.swift in Sources */,
 				F4AA08E22CE07CBA00252A9C /* FinalConclusion.swift in Sources */,
