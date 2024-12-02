@@ -39,9 +39,9 @@ struct AddNewFieldView: View {
                         Button("Start Designing") {
                             withAnimation {
                                 showCustomField = true
+                                showInstructions = false
                             }
                         }
-//                        .buttonStyle(GradientButtonStyle())
                     }
                     .padding()
                 } else {
@@ -65,7 +65,8 @@ struct AddNewFieldView: View {
                         }
                         .padding()
                         
-                        GradientButton(text: "Apply Custom Field")
+                        Text("Apply Custom Field")
+                            .foregroundStyle(.blue)
                             .onTapGesture {
                                 applyCustomField()
                             }

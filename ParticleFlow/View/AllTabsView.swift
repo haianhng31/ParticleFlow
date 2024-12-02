@@ -16,23 +16,35 @@ struct AllTabsView: View {
      
     var body: some View {
         TabView(selection: $selectedTab) {
-            BasicsView()
+            VectorMathPlaygroundView()
                 .tabItem {
-                    Label("Basics", systemImage: "1.circle")
+                    Label("Vector", systemImage: "1.circle")
                 }
                 .tag(0)
             
-            PresetFieldsView()
+            BasicsView()
                 .tabItem {
-                    Label("Presets", systemImage: "2.circle")
+                    Label("Basics", systemImage: "2.circle")
                 }
                 .tag(1)
             
-            InteractiveFieldView()
+            PresetFieldsView()
                 .tabItem {
-                    Label("Interactive", systemImage: "3.circle")
+                    Label("Presets", systemImage: "3.circle")
                 }
                 .tag(2)
+            
+            AddNewFieldView()
+                .tabItem {
+                    Label("New Field", systemImage: "4.circle")
+                }
+                .tag(3)
+            
+            InteractiveFieldView()
+                .tabItem {
+                    Label("Interactive", systemImage: "5.circle")
+                }
+                .tag(5)
         }
     }
 }
