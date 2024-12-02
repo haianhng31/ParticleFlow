@@ -32,36 +32,36 @@ struct FinalConclusion: View {
                     .opacity(isAnimating ? 1 : 0)
                     .offset(y: isAnimating ? 0 : 20)
                 
-                // Key learnings section
-                VStack(alignment: .leading, spacing: 25) {
-                    Text("The patterns you created are similar to:")
-                        .font(.headline)
-                        .foregroundStyle(.secondary)
-                    
-                    KeyLearningCard(
-                        title: "Natural Phenomena",
-                        items: [
-                            "Air flow patterns in atmospheric science",
-                            "Ocean currents in marine biology",
-                            "Magnetic fields in physics"
-                        ],
-                        iconName: "leaf.fill"
-                    )
-                    
-                    KeyLearningCard(
-                        title: "Applications",
-                        items: [
-                            "Computer graphics and animation",
-                            "Fluid dynamics simulation",
-                            "Weather pattern prediction",
-                            "Particle system design"
-                        ],
-                        iconName: "gear"
-                    )
-                }
-                .opacity(isAnimating ? 1 : 0)
-                .offset(y: isAnimating ? 0 : 20)
-                
+//                // Key learnings section
+//                VStack(alignment: .leading, spacing: 25) {
+//                    Text("The patterns you created are similar to:")
+//                        .font(.headline)
+//                        .foregroundStyle(.secondary)
+//                    
+//                    KeyLearningCard(
+//                        title: "Natural Phenomena",
+//                        items: [
+//                            "Air flow patterns in atmospheric science",
+//                            "Ocean currents in marine biology",
+//                            "Magnetic fields in physics"
+//                        ],
+//                        iconName: "leaf.fill"
+//                    )
+//                    
+//                    KeyLearningCard(
+//                        title: "Applications",
+//                        items: [
+//                            "Computer graphics and animation",
+//                            "Fluid dynamics simulation",
+//                            "Weather pattern prediction",
+//                            "Particle system design"
+//                        ],
+//                        iconName: "gear"
+//                    )
+//                }
+//                .opacity(isAnimating ? 1 : 0)
+//                .offset(y: isAnimating ? 0 : 20)
+//                
                 ReminderCard(
                     text: "Remember: Every point in a vector field has both magnitude (strength) and direction, working together to create the beautiful patterns you've explored today."
                 )

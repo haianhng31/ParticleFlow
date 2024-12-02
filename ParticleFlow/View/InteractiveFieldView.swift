@@ -112,7 +112,7 @@ struct InteractiveFieldView: View {
                 .padding(.bottom)
                 .foregroundColor(.secondary)
             
-            NavigationLink(destination: FinalConclusion()) {
+            NavigationLink(destination: VectorFieldApplicationsView()) {
                 GradientButton(text: "Next")
                     .frame(width: 150)
             }

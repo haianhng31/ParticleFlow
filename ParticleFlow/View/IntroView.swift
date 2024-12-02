@@ -22,7 +22,7 @@ struct IntroView: View {
                 FeaturesGrid()
                 
                 // Navigation button
-                NavigationLink(destination: BasicsView()) {
+                NavigationLink(destination: VectorMathPlaygroundView()) {
                     GradientButton(text: "Start Exploring")
                 }
                 .padding(.vertical)

@@ -38,7 +38,7 @@ struct PresetFieldsView: View {
                         Text("Sink").tag(FieldType.sink)
                         Text("Source").tag(FieldType.source)
                         Text("Gravitational").tag(FieldType.gravitational)
-                        Text("Wave").tag(FieldType.wave)
+//                        Text("Wave").tag(FieldType.wave)
                     }
                     .pickerStyle(SegmentedPickerStyle())
                     
