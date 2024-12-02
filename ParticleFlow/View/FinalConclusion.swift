@@ -68,7 +68,7 @@ struct FinalConclusion: View {
                 .opacity(isAnimating ? 1 : 0)
                 .offset(y: isAnimating ? 0 : 20)
                 
-                NavigationLink(destination: BasicsView()) {
+                NavigationLink(destination: AllTabsView()) {
                     GradientButton(text: "Experiment again")
                 }
             }
