@@ -56,7 +56,7 @@ enum FieldType {
         case .wave:
             // This creates a sinusoidal wave pattern moving left to right
             let frequency: CGFloat = 0.1  // Adjust for desired wave length
-//            let speed: CGFloat = 0.5      // Adjust for wave speed
+            //            let speed: CGFloat = 0.5      // Adjust for wave speed
             let time = CGFloat(Date().timeIntervalSince1970)
             
             return CGVector(
