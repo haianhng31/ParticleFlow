@@ -28,7 +28,6 @@
 		F4AA08E52CE07FDF00252A9C /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AA08E42CE07FDF00252A9C /* LottieView.swift */; };
 		F4AA08E72CE0801000252A9C /* ParticlesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AA08E62CE0801000252A9C /* ParticlesView.swift */; };
 		F4AA08EB2CE0803100252A9C /* CardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AA08EA2CE0803100252A9C /* CardsView.swift */; };
-		F4E6BD552CFE342D008DF929 /* VRParticleFlowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E6BD542CFE342D008DF929 /* VRParticleFlowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,7 +53,6 @@
 		F4AA08E42CE07FDF00252A9C /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		F4AA08E62CE0801000252A9C /* ParticlesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticlesView.swift; sourceTree = "<group>"; };
 		F4AA08EA2CE0803100252A9C /* CardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsView.swift; sourceTree = "<group>"; };
-		F4E6BD542CFE342D008DF929 /* VRParticleFlowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VRParticleFlowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,7 +131,6 @@
 				F4AA08932CE018AA00252A9C /* ContentView.swift */,
 				F4AA08DA2CE0756E00252A9C /* IntroView.swift */,
 				F4AA08D62CE06E6600252A9C /* AllTabsView.swift */,
-				F4E6BD542CFE342D008DF929 /* VRParticleFlowView.swift */,
 				F4AA089F2CE018D200252A9C /* BasicsView.swift */,
 				F4AA08A12CE018DA00252A9C /* PresetFieldsView.swift */,
 				F4AA08A32CE018E300252A9C /* InteractiveFieldView.swift */,
@@ -245,7 +242,6 @@
 				F4AA08DB2CE0756E00252A9C /* IntroView.swift in Sources */,
 				F4AA08A22CE018DA00252A9C /* PresetFieldsView.swift in Sources */,
 				F4AA08B92CE027C300252A9C /* FieldType.swift in Sources */,
-				F4E6BD552CFE342D008DF929 /* VRParticleFlowView.swift in Sources */,
 				F4AA08E02CE075C900252A9C /* GradientButton.swift in Sources */,
 				F4AA08922CE018AA00252A9C /* ParticleFlowApp.swift in Sources */,
 				F4AA08D92CE0737D00252A9C /* View+Extension.swift in Sources */,
