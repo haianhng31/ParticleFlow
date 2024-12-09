@@ -17,7 +17,7 @@ class ParticleScene: SKScene {
     
     override func didMove(to view: SKView) {
         backgroundColor = .black
-        initializeParticles() // should remove or not?
+        initializeParticles() 
     }
     
     func initializeParticles() {

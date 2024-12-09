@@ -25,8 +25,6 @@ enum FieldType: Hashable {
             return .zero
             
         case .vortex:
-            let center = CGPoint(x: point.x - 200, y: point.y - 200)
-            let distance = sqrt(center.x * center.x + center.y * center.y)
             return CGVector(
                 dx: -center.y / distance,
                 dy: center.x / distance
@@ -53,8 +51,8 @@ enum FieldType: Hashable {
             
         case .wave:
             // This creates a sinusoidal wave pattern moving left to right
-            let frequency: CGFloat = 0.1  // Adjust for desired wave length
-            //            let speed: CGFloat = 0.5      // Adjust for wave speed
+            let frequency: CGFloat = 0.1  // wave length
+            //            let speed: CGFloat = 0.5      // wave speed
             let time = CGFloat(Date().timeIntervalSince1970)
             
             return CGVector(
@@ -71,6 +69,14 @@ enum FieldType: Hashable {
     }
     
     func evaluateFormula(_ formula: String, center: CGPoint, distance: CGFloat) -> CGFloat {
+        var cleanedFormula = formula
+                // Remove whitespace
+                .replacingOccurrences(of: " ", with: "")
+                // Replace implicit multiplication
+                .replacingOccurrences(of: ")(", with: ")*(")
+                .replacingOccurrences(of: "\\)\\d", with: ")*")
+                .replacingOccurrences(of: "\\d\\(", with: "*")
+        
         // Create a dictionary of available variables
         let variables: [String: CGFloat] = [
             "center.x": center.x,
@@ -79,11 +85,11 @@ enum FieldType: Hashable {
             "pi": CGFloat.pi
         ]
         
-        // Replace any custom functions or variables
-        let processedFormula = formula
-            .replacingOccurrences(of: "sin", with: "FUNCTION(center.x, 'sin:')")
-            .replacingOccurrences(of: "cos", with: "FUNCTION(center.x, 'cos:')")
-            .replacingOccurrences(of: "abs", with: "FUNCTION(center.x, 'abs:')")
+        // Replace mathematical functions
+        let processedFormula = cleanedFormula
+            .replacingOccurrences(of: "sin(", with: "FUNCTION(center.x, 'sin:')")
+            .replacingOccurrences(of: "cos(", with: "FUNCTION(center.x, 'cos:')")
+            .replacingOccurrences(of: "abs(", with: "FUNCTION(center.x, 'abs:')")
         
         // Create an expression with the formula
         let expression = NSExpression(format: processedFormula)
