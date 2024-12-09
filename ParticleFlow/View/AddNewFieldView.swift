@@ -9,8 +9,8 @@ import SwiftUI
 import SpriteKit
 
 struct AddNewFieldView: View {
-    @State private var dxFormula: String = "center.x / distance"
-    @State private var dyFormula: String = "center.y / distance"
+    @State private var dxFormula: String = "centerX / distance"
+    @State private var dyFormula: String = "centerY / distance"
     @State private var fieldStrength: Double = 1.0
     @State private var showCustomField: Bool = false
     @StateObject private var sceneWrapper = SceneWrapper()
@@ -89,8 +89,8 @@ struct AddNewFieldView: View {
         .toolbar {
             Button("Reset") {
                 showCustomField = false
-                dxFormula = "center.x / distance"
-                dyFormula = "center.y / distance"
+                dxFormula = "centerX / distance"
+                dyFormula = "centerY / distance"
                 fieldStrength = 1.0
                 showInstructions = false
             }
@@ -105,8 +105,8 @@ struct AddNewFieldView: View {
             Text("Create your vector field using these variables:")
             
             Group {
-                Text("• `center.x`: Horizontal distance from center")
-                Text("• `center.y`: Vertical distance from center")
+                Text("• `centerX`: Horizontal distance from center")
+                Text("• `centerY`: Vertical distance from center")
                 Text("• `distance`: Euclidean distance from center")
             }
             .foregroundColor(.secondary)
@@ -115,9 +115,9 @@ struct AddNewFieldView: View {
                 .font(.subheadline)
             
             Group {
-                Text("• Radial Outward: dx = center.x / distance, dy = center.y / distance")
-                Text("• Circular Motion: dx = -center.y / distance, dy = center.x / distance")
-                Text("• Diagonal Sweep: dx = sin(center.x), dy = cos(center.y)")
+                Text("• Radial Outward: dx = centerX / distance, dy = centerY / distance")
+                Text("• Circular Motion: dx = -centerY / distance, dy = centerX / distance")
+                Text("• Diagonal Sweep: dx = sin(centerX), dy = cos(centerY)")
             }
             .foregroundColor(.blue)
             

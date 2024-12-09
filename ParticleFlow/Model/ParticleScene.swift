@@ -10,10 +10,10 @@ import SwiftUI
 
 class ParticleScene: SKScene {
     var particles: [Particle] = []
-    private var fieldType: FieldType = .none
     var particleCount: Int = 100
     var fieldStrength: CGFloat = 1.0
-    var particleColor: UIColor = .white
+    private(set) var particleColor: UIColor = .white
+    private var fieldType: FieldType = .none
     
     override func didMove(to view: SKView) {
         backgroundColor = .black
