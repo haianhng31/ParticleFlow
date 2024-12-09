@@ -69,41 +69,60 @@ enum FieldType: Hashable {
     }
     
     func evaluateFormula(_ formula: String, center: CGPoint, distance: CGFloat) -> CGFloat {
-        var cleanedFormula = formula
-                // Remove whitespace
-                .replacingOccurrences(of: " ", with: "")
-                // Replace implicit multiplication
-                .replacingOccurrences(of: ")(", with: ")*(")
-                .replacingOccurrences(of: "\\)\\d", with: ")*")
-                .replacingOccurrences(of: "\\d\\(", with: "*")
-        
-        // Create a dictionary of available variables
         let variables: [String: CGFloat] = [
-            "center.x": center.x,
-            "center.y": center.y,
+            "centerX": center.x,
+            "centerY": center.y,
             "distance": distance,
             "pi": CGFloat.pi
         ]
+
+        // Substitute variables into the formula
+        var processedFormula = formula
+        variables.forEach { key, value in
+            processedFormula = processedFormula.replacingOccurrences(of: key, with: "\(value)")
+        }
+
+        // Replace supported functions with their computed values
+        let patterns: [String: (CGFloat) -> CGFloat] = [
+            "sin": { sin($0) },
+            "cos": { cos($0) },
+            "abs": { abs($0) }
+        ]
+
+        for (functionName, function) in patterns {
+            let regex = try! NSRegularExpression(pattern: "\(functionName)\\(([^\\)]+)\\)")
+            let matches = regex.matches(in: processedFormula, options: [], range: NSRange(processedFormula.startIndex..., in: processedFormula))
+            
+            for match in matches {
+                // Extract the argument (value inside parentheses)
+                if let range = Range(match.range(at: 1), in: processedFormula) {
+                    let argument = processedFormula[range]
+                    if let argumentValue = Double(argument) {
+                        let result = function(CGFloat(argumentValue))
+                        
+                        // Replace the function call with the result
+                        let fullMatchRange = match.range
+                        if let fullRange = Range(fullMatchRange, in: processedFormula) {
+                            processedFormula.replaceSubrange(fullRange, with: "\(result)")
+                        }
+                    } else {
+                        fatalError("Invalid formula argument for \(functionName): \(argument)")
+                    }
+                }
+            }
+        }
         
-        // Replace mathematical functions
-        let processedFormula = cleanedFormula
-            .replacingOccurrences(of: "sin(", with: "FUNCTION(center.x, 'sin:')")
-            .replacingOccurrences(of: "cos(", with: "FUNCTION(center.x, 'cos:')")
-            .replacingOccurrences(of: "abs(", with: "FUNCTION(center.x, 'abs:')")
-        
-        // Create an expression with the formula
+        print("Processed formula: \(processedFormula)")
+
+        // Evaluate the processed formula without any functions
         let expression = NSExpression(format: processedFormula)
-        
-        // Create a context with variables
-        let context = NSMutableDictionary()
-        variables.forEach { context[$0.key] = $0.value }
-        
-        // Evaluate the expression
-        if let result = expression.expressionValue(with: context, context: nil) as? CGFloat {
-            return result
+        if let result = expression.expressionValue(with: nil, context: nil) as? NSNumber {
+            return CGFloat(result.doubleValue)
         }
        
-        // Fallback to a default value if evaluation fails
-        return 0
+       // Fallback to a default value if evaluation fails
+       return 0
     }
 }
+
+
