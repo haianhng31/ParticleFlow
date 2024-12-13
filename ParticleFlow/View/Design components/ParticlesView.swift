@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct ParticlesView: View {
-    @State private var phase: CGFloat = 0
+//    @State private var phase: CGFloat = 0
     
     var body: some View {
         TimelineView(.animation) { timeline in
             Canvas { context, size in
                 let particleCount = 50
                 let timeDate = timeline.date.timeIntervalSinceReferenceDate
-                phase = timeDate.remainder(dividingBy: 2)
+//                phase = timeDate.remainder(dividingBy: 2)
                 
                 for i in 0..<particleCount {
                     let position = CGPoint(
