@@ -52,7 +52,7 @@ struct PresetFieldsView: View {
                     .padding(.horizontal)
                     .foregroundColor(.secondary)
                 
-                NavigationLink(destination: AddNewFieldView()) {
+                NavigationLink(destination: FieldSuperpositionView()) {
                     GradientButton(text: "Next")
                         .frame(width: 150)
                 }

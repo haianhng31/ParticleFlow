@@ -15,8 +15,16 @@ class ParticleScene: SKScene {
     private(set) var particleColor: UIColor = .white
     private var fieldType: FieldType = .none
     
+    // Properties for divergence and curl
     var divergence: Double = 0.0
     var curl: Double = 0.0
+    
+    // Properties for field superposition
+    var isFieldSuperposition = false
+    var field1Strength: CGFloat = 1.0
+    var field2Strength: CGFloat = 1.0
+    var field1Type: FieldType = .vortex
+    var field2Type: FieldType = .sink
     
     override func didMove(to view: SKView) {
         backgroundColor = .black
@@ -66,6 +74,12 @@ class ParticleScene: SKScene {
     }
     
     func calculateForce(at position: CGPoint) -> CGVector {
+        if isFieldSuperposition {
+            let field1Force = field1Type.calculateForce(at: position, strength: field1Strength)
+            let field2Force = field2Type.calculateForce(at: position, strength: field2Strength)
+            return field1Force + field2Force
+        }
+        
         let fieldForce = fieldType.calculateForce(at: position, strength: fieldStrength)
         
         // Divergence effect: Particles move outward or inward based on divergence
@@ -73,8 +87,9 @@ class ParticleScene: SKScene {
         
         // Curl effect: Particles rotate around the center based on curl
         let curlForce = CGVector(dx: -position.y * curl, dy: position.x * curl)
-        
+
         return fieldForce + divergenceForce + curlForce
+        
     }
     
     func setFieldType(_ type: FieldType) {
