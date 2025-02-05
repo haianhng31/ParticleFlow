@@ -45,10 +45,10 @@ struct FieldSuperpositionView: View {
                     .padding(.horizontal)
                     .foregroundColor(.secondary)
                 
-//                NavigationLink(destination: FieldAnomaliesObstaclesView()) {
-//                    GradientButton(text: "Next")
-//                        .frame(width: 150)
-//                }
+                NavigationLink(destination: AddNewFieldView()) {
+                    GradientButton(text: "Next")
+                        .frame(width: 150)
+                }
             }
             .onChange(of: field1Strength, updateScene)
             .onChange(of: field2Strength, updateScene)
