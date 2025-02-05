@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		F43824EB2D5403F20089818A /* DivergenceCurlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43824EA2D5403F20089818A /* DivergenceCurlView.swift */; };
 		F43824F12D540ED90089818A /* FieldSuperpositionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43824F02D540ED90089818A /* FieldSuperpositionView.swift */; };
+		F43824F32D5412A30089818A /* FieldAnomaliesObstaclesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43824F22D5412A30089818A /* FieldAnomaliesObstaclesView.swift */; };
 		F4AA08922CE018AA00252A9C /* ParticleFlowApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AA08912CE018AA00252A9C /* ParticleFlowApp.swift */; };
 		F4AA08942CE018AA00252A9C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AA08932CE018AA00252A9C /* ContentView.swift */; };
 		F4AA08962CE018AB00252A9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4AA08952CE018AB00252A9C /* Assets.xcassets */; };
@@ -39,6 +40,7 @@
 /* Begin PBXFileReference section */
 		F43824EA2D5403F20089818A /* DivergenceCurlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DivergenceCurlView.swift; sourceTree = "<group>"; };
 		F43824F02D540ED90089818A /* FieldSuperpositionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldSuperpositionView.swift; sourceTree = "<group>"; };
+		F43824F22D5412A30089818A /* FieldAnomaliesObstaclesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldAnomaliesObstaclesView.swift; sourceTree = "<group>"; };
 		F4AA088E2CE018AA00252A9C /* ParticleFlow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParticleFlow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4AA08912CE018AA00252A9C /* ParticleFlowApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticleFlowApp.swift; sourceTree = "<group>"; };
 		F4AA08932CE018AA00252A9C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 				F4E6BD5A2CFE36BD008DF929 /* VectorFieldApplicationsView.swift */,
 				F4AA08E12CE07CBA00252A9C /* FinalConclusion.swift */,
 				F4E6BD562CFE3635008DF929 /* VectorFieldVisualizationView.swift */,
+				F43824F22D5412A30089818A /* FieldAnomaliesObstaclesView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -246,6 +249,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F43824F32D5412A30089818A /* FieldAnomaliesObstaclesView.swift in Sources */,
 				F4AA08B02CE0273D00252A9C /* CGVector+Extension.swift in Sources */,
 				F4AA08E52CE07FDF00252A9C /* LottieView.swift in Sources */,
 				F4AA08E72CE0801000252A9C /* ParticlesView.swift in Sources */,
