@@ -45,7 +45,7 @@ struct BasicsView: View {
                     .padding(.horizontal)
                     .foregroundColor(.secondary)
                 
-                NavigationLink(destination: PresetFieldsView()) {
+                NavigationLink(destination: DivergenceCurlView()) {
                     GradientButton(text: "Next")
                         .frame(width: 150)
                 }

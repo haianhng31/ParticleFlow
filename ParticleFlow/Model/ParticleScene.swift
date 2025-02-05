@@ -11,9 +11,12 @@ import SwiftUI
 class ParticleScene: SKScene {
     var particles: [Particle] = []
     var particleCount: Int = 100
-    var fieldStrength: CGFloat = 1.0
+    var fieldStrength: CGFloat = 0.1
     private(set) var particleColor: UIColor = .white
     private var fieldType: FieldType = .none
+    
+    var divergence: Double = 0.0
+    var curl: Double = 0.0
     
     override func didMove(to view: SKView) {
         backgroundColor = .black
@@ -63,7 +66,15 @@ class ParticleScene: SKScene {
     }
     
     func calculateForce(at position: CGPoint) -> CGVector {
-        return fieldType.calculateForce(at: position, strength: fieldStrength)
+        let fieldForce = fieldType.calculateForce(at: position, strength: fieldStrength)
+        
+        // Divergence effect: Particles move outward or inward based on divergence
+        let divergenceForce = CGVector(dx: position.x * divergence, dy: position.y * divergence)
+        
+        // Curl effect: Particles rotate around the center based on curl
+        let curlForce = CGVector(dx: -position.y * curl, dy: position.x * curl)
+        
+        return fieldForce + divergenceForce + curlForce
     }
     
     func setFieldType(_ type: FieldType) {

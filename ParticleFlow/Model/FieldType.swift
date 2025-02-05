@@ -25,34 +25,25 @@ enum FieldType: Hashable {
             return .zero
             
         case .vortex:
-            return CGVector(
-                dx: -center.y / distance,
-                dy: center.x / distance
-            ) * strength
+            let normalizedVector = CGVector(dx: -center.y / distance, dy: center.x / distance)
+            return normalizedVector * strength
             
         case .sink:
-            return CGVector(
-                dx: -center.x / distance,
-                dy: -center.y / distance
-            ) * strength
+            let normalizedVector = CGVector(dx: -center.x / distance, dy: -center.y / distance)
+            return normalizedVector * strength
             
         case .source:
-            return CGVector(
-                dx: center.x / distance,
-                dy: center.y / distance
-            ) * strength
+            let normalizedVector = CGVector(dx: center.x / distance, dy: center.y / distance)
+            return normalizedVector * strength
             
         case .gravitational:
-            let force = strength / (distance * distance + 1)
-            return CGVector(
-                dx: -center.x * force,
-                dy: -center.y * force
-            )
+            let epsilon: CGFloat = 1e-6 // Add a small epsilon value (1e-6) to avoid division by zero
+            let force = strength / (distance * distance + epsilon)
+            return CGVector(dx: -center.x * force, dy: -center.y * force)
             
         case .wave:
-            // This creates a sinusoidal wave pattern moving left to right
             let frequency: CGFloat = 0.1  // wave length
-            //            let speed: CGFloat = 0.5      // wave speed
+            // let speed: CGFloat = 0.5      // wave speed
             let time = CGFloat(Date().timeIntervalSince1970)
             
             return CGVector(

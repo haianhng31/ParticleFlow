@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F43824EB2D5403F20089818A /* DivergenceCurlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43824EA2D5403F20089818A /* DivergenceCurlView.swift */; };
 		F4AA08922CE018AA00252A9C /* ParticleFlowApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AA08912CE018AA00252A9C /* ParticleFlowApp.swift */; };
 		F4AA08942CE018AA00252A9C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AA08932CE018AA00252A9C /* ContentView.swift */; };
 		F4AA08962CE018AB00252A9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4AA08952CE018AB00252A9C /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F43824EA2D5403F20089818A /* DivergenceCurlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DivergenceCurlView.swift; sourceTree = "<group>"; };
 		F4AA088E2CE018AA00252A9C /* ParticleFlow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParticleFlow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4AA08912CE018AA00252A9C /* ParticleFlowApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticleFlowApp.swift; sourceTree = "<group>"; };
 		F4AA08932CE018AA00252A9C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 				F4AA08DA2CE0756E00252A9C /* IntroView.swift */,
 				F4E6BD582CFE3696008DF929 /* VectorMathPlayground.swift */,
 				F4AA089F2CE018D200252A9C /* BasicsView.swift */,
+				F43824EA2D5403F20089818A /* DivergenceCurlView.swift */,
 				F4AA08A12CE018DA00252A9C /* PresetFieldsView.swift */,
 				F4E6BD602CFE4528008DF929 /* AddNewFieldView.swift */,
 				F4AA08A32CE018E300252A9C /* InteractiveFieldView.swift */,
@@ -248,6 +251,7 @@
 				F4AA08AD2CE026FF00252A9C /* SceneWrapper.swift in Sources */,
 				F4AA08A42CE018E300252A9C /* InteractiveFieldView.swift in Sources */,
 				F4AA08A02CE018D200252A9C /* BasicsView.swift in Sources */,
+				F43824EB2D5403F20089818A /* DivergenceCurlView.swift in Sources */,
 				F4AA08D72CE06E6600252A9C /* AllTabsView.swift in Sources */,
 				F4E6BD5B2CFE36BD008DF929 /* VectorFieldApplicationsView.swift in Sources */,
 				F4E6BD572CFE3635008DF929 /* VectorFieldVisualizationView.swift in Sources */,
