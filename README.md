@@ -9,6 +9,9 @@ By Hai-Anh Nguyen.
 
 ParticleFlow is an interactive app that helps students overcome their struggle with abstract vector field concepts by letting them visualize, manipulate, and interact with particle dynamics in real-time. 
 
+<img width="370" alt="Screenshot 2025-03-23 at 12 50 27 PM" src="https://github.com/user-attachments/assets/869e72a4-b637-4489-a8aa-bb814a163351" />
+
+
 <!-- 
 ## Table of Contents 🗺️
 
@@ -25,43 +28,74 @@ ParticleFlow is an interactive app that helps students overcome their struggle w
 
 ## Inspiration 🧠
 
-We are living in a state where there are numerous constant notifications, live fast-paced lives, and often feel overwhelmed by the digital noise surrounding us. **PeacePod** aims to build a space where you can create your own safe digital pod, live slower and more intentionally, get away from instant notifications and constant distractions, connect with others on a deeper, more meaningful level, and create personalized meditation room that nurtures your well-being.
+Vector fields are a fundamental concept in physics and engineering, yet they can feel abstract and hard to grasp. I wanted to create something interactive—an app that would let students see and feel how vector fields work, rather than just studying equations on paper.
 
-## Main Features & How to use 👍
+## How I built it 💪
 
+![Swift](https://img.shields.io/badge/swift-1572B6?style=for-the-badge&logo=swift&logoColor=white) ![SwiftUI](https://img.shields.io/badge/SwiftUI-E34F26?style=for-the-badge&logo=SwiftUI&logoColor=white) ![SpriteKit](https://img.shields.io/badge/SpriteKit-CC6699?style=for-the-badge&logo=SpriteKit&logoColor=white) ![Combine](https://img.shields.io/badge/Combine-47A248?style=for-the-badge&logo=Combine&logoColor=white) ![MVVM](https://img.shields.io/badge/MVVM-61DAFB?style=for-the-badge&logo=MVVM&logoColor=black) ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 
-## How we built it 💪
-
-![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white) ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) ![SCSS](https://img.shields.io/badge/SCSS-CC6699?style=for-the-badge&logo=sass&logoColor=white) ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white) ![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black) ![Express](https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white) ![NodeJS](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white) ![JS](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black) ![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white) ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-
-- **Frontend**: React
-- **Backend**: Node.Js, Express, Flask
+- **Language**: Swift
+- **Framework**: SwiftUI, SpriteKit, Combine
+- **Architecture**: MVVM 
 - **Design**: Excalidraw, Hand + Paper
-- **Database**: MongoDB
-- **Web Hosting**: AWS S3, EC3 (in progress)
 - **Version Control**: Git & GitHub
 
+## Main Features & How to use 👍
+#### Vector Math Playground 
+Change around the 2 vectors, scalar multiplication and see how they interact 
+
+<img width="374" alt="Screenshot 2025-03-23 at 12 51 46 PM" src="https://github.com/user-attachments/assets/c7a4c4f2-2fae-45bc-95c2-e456be233bdd" />
+
+#### Vector Field Basics 
+This demonstrates a basic vortex field where particles move in circular patterns. The strength affects how quickly they rotate, while the particle count shows how the field affects multiple points simultaneously.
+
+<img width="372" alt="Vector Field Basics " src="https://github.com/user-attachments/assets/289538f8-6713-43be-99dd-12591fc5133e" />
+
+#### Divergence and Curl Visualization
+Adjust the divergence and curl values to see how the vector field changes. Divergence affects how much the field spreads out, while curl affects the rotation.
+
+<img width="369" alt="Divergence and Curl Visualization" src="https://github.com/user-attachments/assets/7d3dfb68-5fa2-4919-8b4e-e4c31b0f94b0" />
+
+#### Preset Vector Fields 
+Choose 1 among 4 different vector field presets to see how they act uniquely.
+
+<img width="374" alt="Preset Vector Fields " src="https://github.com/user-attachments/assets/8c06c87c-31cd-4385-8be6-a5508d5e81e4" />
+
+#### Field Superposition
+Adjust the divergence and curl values to see how the vector field changes. Divergence affects how much the field spreads out, while curl affects the rotation.
+
+<img width="370" alt="Field Superposition" src="https://github.com/user-attachments/assets/6254f4d9-b123-4cbb-81a8-bc4e0f1872f5" />
+
+#### Custom Vector Field
+CREATE YOUR OWN!
+
+<img width="373" alt="Screenshot 2025-03-23 at 1 04 15 PM" src="https://github.com/user-attachments/assets/a64afa1b-fbdd-4460-ad6d-37562c51f944" />
+<img width="372" alt="Screenshot 2025-03-23 at 1 03 56 PM" src="https://github.com/user-attachments/assets/8813058d-b55a-41a3-aff0-2fb6d85490d3" />
+
+#### Interact with your Hand
+Touch and drag to create vector fields. The particles will follow your touch movements!
+
+<img width="377" alt="Screenshot 2025-03-23 at 1 04 49 PM" src="https://github.com/user-attachments/assets/325f0c74-88fa-4362-bb8c-b88f668bf36c" />
+
 ## Challenges I ran into 🥺
+- Physics in Code 🤯 – Translating mathematical vector field concepts into real-time particle interactions was tricky. Debugging edge cases like unstable particle behavior took a lot of tweaking.
+- Performance Optimization 🔥 – Making sure thousands of particles moved smoothly without lag was a challenge. I had to experiment with different rendering techniques to keep it efficient.
+- Touch Interaction ✋ – Implementing real-time field manipulation with touch gestures was harder than expected, especially ensuring smooth and intuitive interactions.
 
-- Time Management: At the end of the project, we have 4 different timezones to juggle (Eastern US, Canada, Australia, Vietnam). Thus someone has to wake up really early and someone has to stay really late for our weekly meetings!
-- We are not frontend masters, so we struggle with making our website as pretty as possible (We have to redesign nearly everything in the last few weeks).
-- Bugs everywhere: The more we build, the more bugs appear and they are everywhere! We spent a lot of time debugging and making sure our app doesn't have any major fault the present user to have a smooth experience.
-- Spotify Authentication: Many music streaming service closed their APIs to the public, and we can only find Spotify available. But Spotify requires user to log in and must have premium account. The authentication flow is also confusing at first.
+## Accomplishments that I'm proud of 🥰
+- Real-Time Interactions ⚡ – Seeing particles respond instantly to touch was incredibly satisfying!
+- Custom Vector Fields 🎨 – Users can create their own fields and experiment freely, making learning more fun and hands-on.
+- Smooth Animations 🎥 – Optimized rendering so the app runs buttery smooth, even with hundreds of particles in motion.
 
-## Accomplishments that we're proud of 🥰
-
-- Despite the time commitment issues, we were able to create a final deliverable at the end and learnt a lot in the process.
-- We have a great teamwork - unexpected things happen, but no one is blamed and we keep moving forward and working together to find a solution.
-- We built off of the feedbacks we received from our project advisors through out the whole process (giant thanks to [@khoa165](https://github.com/khoa165), [@ankhuetang](https://github.com/ankhuetang), [@Taenerys](https://github.com/Taenerys)).
-- We demonstrated great Git best practices (Pull Requests, README.md, Code Review, etc.)
-- We learned a lot as a team and as individual. We built many cool features and now have mastered using a lot of APIs!
-
+<!-- 
 ## What I learned 💡
 
 - Acting as a Project Manager: deciding the direction of the project, assigning tasks, holding meetings, taking notes, being encouraging, etc.
 - Good GitHub practices.
 - Good collaboration between teammates.
 - Never afraid to ask questions / for help.
+-->
+
 
 ## What's next for ParticleFlow 🤫
 
@@ -73,16 +107,10 @@ We are living in a state where there are numerous constant notifications, live f
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
 
-[![ForTheBadge uses-git](http://ForTheBadge.com/images/badges/uses-git.svg)](https://github.com/jennydo/PeacePod-Frontend)
-[![ForTheBadge uses-html](http://ForTheBadge.com/images/badges/uses-html.svg)](https://github.com/jennydo/PeacePod-Frontend)
-[![ForTheBadge uses-css](http://ForTheBadge.com/images/badges/uses-css.svg)](https://github.com/jennydo/PeacePod-Frontend)
-[![ForTheBadge uses-js](http://ForTheBadge.com/images/badges/uses-js.svg)](https://github.com/jennydo/PeacePod-Frontend)
-[![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://github.com/jennydo/PeacePod-Frontend)
-[![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://github.com/jennydo/PeacePod-Frontend)
-[![forthebadge](https://forthebadge.com/images/badges/open-source.svg)](https://github.com/jennydo/PeacePod-Frontend)
+[![ForTheBadge uses-git](http://ForTheBadge.com/images/badges/uses-git.svg)](https://github.com/haianhng31/ParticleFlow)
+[![forthebadge](https://forthebadge.com/images/badges/open-source.svg)](https://github.com/haianhng31/ParticleFlow)
 
-[![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://github.com/jennydo/PeacePod-Frontend)
-[![ForTheBadge built-by-developers](http://ForTheBadge.com/images/badges/built-by-developers.svg)](https://github.com/jennydo/PeacePod-Frontend)
-[![ForTheBadge built-with-love](http://ForTheBadge.com/images/badges/built-with-love.svg)](https://github.com/jennydo/PeacePod-Frontend)
+[![ForTheBadge built-by-developers](http://ForTheBadge.com/images/badges/built-by-developers.svg)](https://github.com/haianhng31/ParticleFlow)
+[![ForTheBadge built-with-love](http://ForTheBadge.com/images/badges/built-with-love.svg)](https://github.com/haianhng31/ParticleFlow)
 
 ---
